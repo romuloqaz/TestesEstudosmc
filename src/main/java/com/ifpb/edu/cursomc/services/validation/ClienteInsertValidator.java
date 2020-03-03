@@ -13,7 +13,7 @@ import com.ifpb.edu.cursomc.domain.enums.TipoCliente;
 import com.ifpb.edu.cursomc.dto.ClienteNewDTO;
 import com.ifpb.edu.cursomc.repositories.ClienteRepository;
 import com.ifpb.edu.cursomc.resources.exception.FieldMessage;
-import com.ifpb.edu.cursomc.services.validation.utils.BR;
+import com.ifpb.edu.cursomc.services.validation.utils.BR;;
 
 public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert, ClienteNewDTO> {
 	
