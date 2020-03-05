@@ -11,12 +11,13 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
 public class JWTUtil {
+	
 	@Value("${jwt.secret}")
 	private String secret;
 
 	@Value("${jwt.expiration}")
 	private Long expiration;
-
+	
 	public String generateToken(String username) {
 		return Jwts.builder()
 				.setSubject(username)
@@ -45,7 +46,7 @@ public class JWTUtil {
 		}
 		return null;
 	}
-
+	
 	private Claims getClaims(String token) {
 		try {
 			return Jwts.parser().setSigningKey(secret.getBytes()).parseClaimsJws(token).getBody();
