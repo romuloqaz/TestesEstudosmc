@@ -58,6 +58,7 @@ public class Cliente implements Serializable{
 		addPerfil(Perfil.CLIENTE);
 	}
 
+	private String imageUrl;
 
 	public Cliente(Integer id, String nome, String email, String cpfOuCnpj, TipoCliente tipo, String senha) {
 		super();
@@ -150,6 +151,13 @@ public class Cliente implements Serializable{
 		this.pedidos = pedidos;
 	}
 	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 
 	@Override
 	public int hashCode() {
